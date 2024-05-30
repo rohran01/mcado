@@ -4,7 +4,8 @@ import { AppleTvComponent } from './apple-tv/apple-tv.component';
 import { GsAppComponent } from './gs-app/gs-app.component';
 
 export const routes: Routes = [
-    {path: 'screen-saver', component: ScreenSaverComponent},
-    {path: 'apple-tv', component: AppleTvComponent},
-    {path: 'gs-app', component: GsAppComponent}
+    { path: '', component: AppleTvComponent },
+    { path: 'apple-tv', component: AppleTvComponent },
+    { path: 'gs-app', component: GsAppComponent },
+    { path: 'screen-saver', component: ScreenSaverComponent }
 ];
