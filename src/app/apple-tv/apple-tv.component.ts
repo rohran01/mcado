@@ -9,5 +9,5 @@ import { AppIconComponent } from '../app-icon/app-icon.component';
   styleUrl: './apple-tv.component.scss'
 })
 export class AppleTvComponent {
-  constructor () {}
+  constructor() { }
 }

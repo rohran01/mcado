@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-icon',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './app-icon.component.html',
   styleUrl: './app-icon.component.scss'
 })
@@ -13,9 +14,10 @@ export class AppIconComponent {
 
   @Input() operational: boolean = false;
   @Input() backgroundImageUrl: String = '';
+  @Input() backgroundColor: String = ''
 
-  navigateToGSFlix() {
-    if (this.operational) this.router.navigate(['gs-app']);
+  onClick() {
+    if (this.operational) this.router.navigate(['rapture']);
   }
 
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GsAppComponent } from './gs-app.component';
+import { RaptureComponent } from './rapture.component';
 
-describe('GsAppComponent', () => {
-  let component: GsAppComponent;
-  let fixture: ComponentFixture<GsAppComponent>;
+describe('RaptureComponent', () => {
+  let component: RaptureComponent;
+  let fixture: ComponentFixture<RaptureComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GsAppComponent]
+      imports: [RaptureComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GsAppComponent);
+    fixture = TestBed.createComponent(RaptureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

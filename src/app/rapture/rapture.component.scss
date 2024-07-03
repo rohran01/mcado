@@ -1,0 +1,8 @@
+@import '../../assets/colors.scss';
+
+.rapture {
+    &-wrapper {
+        background-color: $rapture-purple;
+        color: $rapture-font-color;
+    }
+}
