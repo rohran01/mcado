@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-rapture',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './rapture.component.html',
   styleUrl: './rapture.component.scss'
 })

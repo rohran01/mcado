@@ -1,9 +1,88 @@
 @import '../../assets/colors.scss';
 
-.rapture {
-    &-wrapper {
-        background-color: white;
-        color: $rapture-blue;
+@font-face {
+    font-family: victorianFont;
+    src: url('../../assets/VictorianDecade.otf');
+}
+
+:host {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    color: $rapture-blue;
+    background: $rapture-yellow;
+    background: radial-gradient(circle, rgba(211, 182, 122, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.top-bar {
+    height: 60px;
+    background-color: white;
+    border-bottom: 2px solid $rapture-blue;
+    display: flex;
+
+    .logo {
+        width: 100px;
+        margin-right: auto;
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        padding-top: 10px;
+
+        &-title {
+            font-family: victorianFont;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        &-subtitle {
+            font-family: victorianFont;
+            color: $rapture-red;
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+
+    .mid-bar {}
+
+    .right-bar {
+        width: 200px;
+        margin-left: auto;
+        height: 100%;
+    }
+}
+
+.splash {
+    height: 240px;
+    color: $rapture-blue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding-top: 48px;
+
+    &-welcome {
+        margin: 0;
+        font-style: italic;
+        font-size: 36px;
+    }
+
+    &-title {
+        font-family: victorianFont;
+        margin: 10px 0 0 0;
+        font-size: 120px;
+    }
+
+    &-subtitle {
+        font-family: victorianFont;
+        color: $rapture-red;
+        margin: 0;
+        font-size: 96px;
     }
 }
