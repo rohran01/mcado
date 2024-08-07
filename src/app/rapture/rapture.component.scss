@@ -24,10 +24,11 @@
     background-color: white;
     border-bottom: 2px solid $rapture-blue;
     display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 
     .logo {
-        width: 100px;
-        margin-right: auto;
+        width: 62px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -49,12 +50,26 @@
         }
     }
 
-    .mid-bar {}
+    .mid-bar {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            margin: 0 40px;
+            font-size: 18px;
+        }
+    }
 
     .right-bar {
-        width: 200px;
-        margin-left: auto;
+        width: 62px;
         height: 100%;
+        display: flex;
+        justify-items: flex-end;
+        justify-content: space-between;
+
+        &-icon {
+            font-size: 36px;
+        }
     }
 }
 
@@ -70,7 +85,7 @@
     &-welcome {
         margin: 0;
         font-style: italic;
-        font-size: 36px;
+        font-size: 24px;
     }
 
     &-title {
