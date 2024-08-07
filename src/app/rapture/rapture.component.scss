@@ -17,6 +17,8 @@
 
 .wrapper {
     margin: 0 auto;
+    height: calc(100vh - 62px);
+    overflow: scroll;
 }
 
 .top-bar {
@@ -74,13 +76,13 @@
 }
 
 .splash {
-    height: 240px;
     color: $rapture-blue;
     display: flex;
     align-items: center;
     justify-items: center;
     flex-direction: column;
     padding-top: 48px;
+    margin-bottom: 40px;
 
     &-welcome {
         margin: 0;
@@ -99,5 +101,15 @@
         color: $rapture-red;
         margin: 0;
         font-size: 96px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+
+    .show-card {
+        // flex: 1 0 21%;
+        margin: 20px;
     }
 }

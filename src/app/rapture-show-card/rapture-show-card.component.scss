@@ -1,0 +1,15 @@
+@import '../../assets/colors.scss';
+
+:host {
+    flex: 1 0 21%;
+    margin: 20px;
+    border-radius: 12px;
+    border: 2px solid $rapture-blue;
+    background-color: rgba(white, 0.6);
+    height: 400px;
+}
+
+.container {
+    height: 100%;
+    padding: 15px;
+}

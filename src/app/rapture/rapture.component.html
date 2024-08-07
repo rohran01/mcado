@@ -1,24 +1,29 @@
-<div class="wrapper">
-    <div class="top-bar">
-        <div class="logo">
-            <p class="logo-title">Rapture</p>
-            <p class="logo-subtitle">Plus</p>
-        </div>
-
-        <div class="mid-bar">
-            <p class="mid-bar-item">Home</p>
-            <p class="mid-bar-item">Favorites</p>
-            <p class="mid-bar-item">History</p>
-        </div>
-
-        <div class="right-bar">
-            <mat-icon class="right-bar-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
-            <mat-icon class="tight-bar-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="person"></mat-icon>
-        </div>
+<div class="top-bar">
+    <div class="logo">
+        <p class="logo-title">Rapture</p>
+        <p class="logo-subtitle">Plus</p>
     </div>
+
+    <div class="mid-bar">
+        <p class="mid-bar-item">Home</p>
+        <p class="mid-bar-item">Favorites</p>
+        <p class="mid-bar-item">History</p>
+    </div>
+
+    <div class="right-bar">
+        <mat-icon class="right-bar-icon" aria-hidden="false" aria-label="Example home icon"
+            fontIcon="search"></mat-icon>
+        <mat-icon class="tight-bar-icon" aria-hidden="false" aria-label="Example home icon"
+            fontIcon="person"></mat-icon>
+    </div>
+</div>
+<div class="wrapper">
     <div class="splash">
         <h5 class="splash-welcome">Welcome to:</h5>
         <h1 class="splash-title">Rapture</h1>
         <h5 class="splash-subtitle">Plus</h5>
+    </div>
+    <div class="cards">
+        <app-rapture-show-card *ngFor="let show of shows;" [showDetails]="show"></app-rapture-show-card>
     </div>
 </div>
