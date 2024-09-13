@@ -15,12 +15,6 @@
     background: radial-gradient(circle, rgba(211, 182, 122, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
 
-.wrapper {
-    margin: 0 auto;
-    height: calc(100vh - 62px);
-    overflow: scroll;
-}
-
 .top-bar {
     height: 60px;
     background-color: white;
@@ -75,40 +69,33 @@
     }
 }
 
-.splash {
-    color: $rapture-blue;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    flex-direction: column;
-    padding-top: 48px;
-    margin-bottom: 40px;
+.wrapper {
+    margin: 0 auto;
+    height: calc(100vh - 62px);
+    overflow: scroll;
+    padding: 24px;
 
-    &-welcome {
-        margin: 0;
-        font-style: italic;
-        font-size: 24px;
-    }
+    .header {
+        .image {
+            height: 200px;
+            float: left;
+            margin-right: 24px;
 
-    &-title {
-        font-family: victorianFont;
-        margin: 10px 0 0 0;
-        font-size: 120px;
-    }
+        }
 
-    &-subtitle {
-        font-family: victorianFont;
-        color: $rapture-red;
-        margin: 0;
-        font-size: 96px;
-    }
-}
+        .title {
+            font-size: 64px;
+            margin-bottom: 12px;
+        }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        .subtitle {
+            font-size: 42px;
+            margin: 12px 0;
+            opacity: 0.8;
+        }
 
-    .show-card {
-        margin: 20px;
+        .instructions {
+            opacity: 0.8;
+        }
     }
 }

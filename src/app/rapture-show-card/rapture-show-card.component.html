@@ -1,8 +1,13 @@
 <div class="container">
     <div class="top-section">
         <img class="cover-art" [src]="showDetails.image" />
-        <div class="description">{{showDetails.description}}</div>
     </div>
     <div class="title">{{showDetails.title}}</div>
-    <div class="footer"></div>
+    <div class="description">{{showDetails.description}}</div>
+    <div class="footer">
+        <div class="play-button" (click)="onClick()">
+            <mat-icon>play_circle</mat-icon>
+            <p class="play-button-title">Play</p>
+        </div>
+    </div>
 </div>
