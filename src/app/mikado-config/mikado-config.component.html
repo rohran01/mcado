@@ -30,7 +30,16 @@
             <mat-step label="Languages & Accents" isEditable="false">
                 <ng-template matStepLabel>Languages & Accents</ng-template>
                 <div class="wizard-content-container">
-                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-body">
+                        <h2 class="wizard-content-container-body-header">Languages & Accents</h2>
+                        <mat-radio-group (change)="scottishWarning()" class="wizard-select-group"
+                            aria-label="Select an option" #accentsGroup>
+                            <mat-radio-button value="1" checked>Midwestern English</mat-radio-button>
+                            <mat-radio-button value="2">Mid-Atlantic English with a wee Scottish Lilt
+                                (Recommended)</mat-radio-button>
+                            <mat-radio-button value="3">Scottish Brogue</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
                         <div class="wizard-button" (click)="navNext(stepper)">Next</div>
@@ -40,7 +49,17 @@
             <mat-step label="Audio" isEditable="false">
                 <ng-template matStepLabel>Audio</ng-template>
                 <div class="wizard-content-container">
-                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-body">
+                        <h2 class="wizard-content-container-body-header">Audio</h2>
+                        <mat-radio-group class="wizard-select-group" aria-label="Select an option">
+                            <mat-radio-button value="1" checked>Mono</mat-radio-button>
+                            <mat-radio-button value="2">Stereo</mat-radio-button>
+                            <mat-radio-button value="3">Dolby 2.0 with <i>Atmos</i></mat-radio-button>
+                            <mat-radio-button value="4"><b>BuikemAudio®</b> ...as if a 30-person orchestra were mere
+                                feet
+                                away</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
                         <div class="wizard-button" (click)="navNext(stepper)">Next</div>
@@ -50,7 +69,13 @@
             <mat-step label="Anachronisms" isEditable="false">
                 <ng-template matStepLabel>Anachronisms</ng-template>
                 <div class="wizard-content-container">
-                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-body">
+                        <h2 class="wizard-content-container-body-header">Anachronisms</h2>
+                        <h1 class="anachronism-label">{{anachronismLabel}}</h1>
+                        <mat-slider class="anachronism-slider" min="0" max="4" step="1" showTickMarks disableRipple>
+                            <input (input)="updateAnachronismLabel($event)" matSliderThumb disableRipple>
+                        </mat-slider>
+                    </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
                         <div class="wizard-button" (click)="navNext(stepper)">Next</div>
@@ -60,7 +85,46 @@
             <mat-step label="Video" isEditable="false">
                 <ng-template matStepLabel>Video</ng-template>
                 <div class="wizard-content-container">
-                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-body">
+                        <h2 class="wizard-content-container-body-header">Video Settings</h2>
+                        <mat-radio-group class="wizard-select-group" aria-label="Select an option">
+                            <mat-radio-button value="1" checked>1973 Sony Trinitron</mat-radio-button>
+                            <mat-radio-button value="2">1995 Sony Bravia</mat-radio-button>
+                            <mat-radio-button value="3">2022 Sony Bravia OLED</mat-radio-button>
+                            <mat-radio-button value="4">2024 <b>G&S Virtual Reality®</b></mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    <div class="wizard-content-container-footer">
+                        <div class="wizard-button" (click)="navBack(stepper)">Back</div>
+                        <div class="wizard-button" (click)="navNext(stepper)">Next</div>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step label="Confirmation" isEditable="false">
+                <ng-template matStepLabel>Confirmation</ng-template>
+                <div class="wizard-content-container">
+                    <div class="wizard-content-container-body">
+                        <p>Congratulations on choosing <b>G&S VirtualReality®</b>, the most advanced platform to stream
+                            your
+                            favorite Gilbert & Sullivan operettas! It functions best with full state of the art
+                            audio/visual
+                            equipment. But all that is truly required is a joyful outlook, an appreciation of the
+                            absurd,
+                            and an empty bladder. We hope you have brought all of these with you.</p>
+
+                        <h3>Please attest to the following before beginning your viewing experience:</h3>
+                        <div class="wizard-select-group">
+                            <mat-checkbox class="wizard-select-group-checkbox">Unwrap Lozenges Now</mat-checkbox>
+                            <mat-checkbox class="wizard-select-group-checkbox">No Texting</mat-checkbox>
+                            <mat-checkbox class="wizard-select-group-checkbox">No Photography</mat-checkbox>
+                            <mat-checkbox class="wizard-select-group-checkbox">Phones Off</mat-checkbox>
+                            <mat-checkbox class="wizard-select-group-checkbox">Please chortle freely and applaud to your
+                                heart’s content!</mat-checkbox>
+                        </div>
+
+                        <p>G&S VirtualReality® technology is highly reliable, but can be sensitive to snoring or humming
+                            along</p>
+                    </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
                         <div class="wizard-button" (click)="navNext(stepper)">Next</div>
