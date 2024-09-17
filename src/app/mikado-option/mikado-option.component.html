@@ -1,1 +1,12 @@
-<p>mikado-option works!</p>
+<div class="container">
+    <div class="image">
+        <img class="cover-art" [src]="showDetails.image" />
+    </div>
+    <div class="details">
+        <h1>{{showDetails.title}}</h1>
+        <h3>{{showDetails.description}}</h3>
+    </div>
+    <div class="play-button">
+        <mat-icon (click)="onClick()">play_circle_outline</mat-icon>
+    </div>
+</div>

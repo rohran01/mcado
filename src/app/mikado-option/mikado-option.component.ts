@@ -16,6 +16,9 @@ export class MikadoOptionComponent {
   @Input() showDetails!: Show;
 
   onClick() {
-    if (this.showDetails.playable) this.router.navigate(['mikado-config'])
+    console.log('clicked:', this.showDetails.playable);
+    if (this.showDetails.playable) {
+      this.router.navigate(['mikado-config'])
+    }
   }
 }

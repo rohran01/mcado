@@ -1,0 +1,32 @@
+@import '../../assets/colors.scss';
+
+.container {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    border-bottom: 1px solid $rapture-blue;
+
+    .cover-art {
+        max-height: 160px;
+    }
+
+    .details {
+        margin-left: 24px;
+
+    }
+
+    .play-button {
+        margin-left: auto;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+
+        mat-icon {
+            height: 60px;
+            width: 60px;
+            font-size: 60px;
+            align-self: center;
+            cursor: pointer;
+        }
+    }
+}

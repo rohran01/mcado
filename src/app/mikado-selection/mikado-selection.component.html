@@ -21,12 +21,11 @@
 <div class="wrapper">
     <div class="header">
         <img class="image" src="../assets/show-images/mikado.jpg" />
-        <h1 class="title">The Mikado</h1>
-        <h2 class="subtitle">Version Selection</h2>
-        <h3 class="instructions">Please select the version of The Mikado you would like to view:</h3>
+        <h1 class="title"><i>The Mikado</i> Version Selection</h1>
+        <h3 class="subtitle">Please select the version of <i>The Mikado</i> you would like to view:</h3>
     </div>
 
     <div class="selections">
-        
+        <app-mikado-option *ngFor="let show of shows;" [showDetails]="show"></app-mikado-option>
     </div>
 </div>

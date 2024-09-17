@@ -17,3 +17,66 @@
             fontIcon="person"></mat-icon>
     </div>
 </div>
+
+<div class="wrapper">
+    <div class="header">
+        <img class="image" src="../assets/mikado-versions/mcado.png" />
+        <h1 class="title"><i>The McAdo</i> Settings</h1>
+        <h3 class="subtitle">In order to optimize your experience, please choose from the following settings:</h3>
+    </div>
+
+    <div class="config-wrapper">
+        <mat-stepper class="wizard" linear #stepper>
+            <mat-step label="Languages & Accents" isEditable="false">
+                <ng-template matStepLabel>Languages & Accents</ng-template>
+                <div class="wizard-content-container">
+                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-footer">
+                        <div class="wizard-button" (click)="navBack(stepper)">Back</div>
+                        <div class="wizard-button" (click)="navNext(stepper)">Next</div>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step label="Audio" isEditable="false">
+                <ng-template matStepLabel>Audio</ng-template>
+                <div class="wizard-content-container">
+                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-footer">
+                        <div class="wizard-button" (click)="navBack(stepper)">Back</div>
+                        <div class="wizard-button" (click)="navNext(stepper)">Next</div>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step label="Anachronisms" isEditable="false">
+                <ng-template matStepLabel>Anachronisms</ng-template>
+                <div class="wizard-content-container">
+                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-footer">
+                        <div class="wizard-button" (click)="navBack(stepper)">Back</div>
+                        <div class="wizard-button" (click)="navNext(stepper)">Next</div>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step label="Video" isEditable="false">
+                <ng-template matStepLabel>Video</ng-template>
+                <div class="wizard-content-container">
+                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-footer">
+                        <div class="wizard-button" (click)="navBack(stepper)">Back</div>
+                        <div class="wizard-button" (click)="navNext(stepper)">Next</div>
+                    </div>
+                </div>
+            </mat-step>
+            <mat-step label="Play" isEditable="false">
+                <ng-template matStepLabel>Play</ng-template>
+                <p>You are now done.</p>
+                <div class="wizard-content-container">
+                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-footer">
+                        <div class="wizard-button" (click)="navBack(stepper)">Back</div>
+                    </div>
+                </div>
+            </mat-step>
+        </mat-stepper>
+    </div>
+</div>
