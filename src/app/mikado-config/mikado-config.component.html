@@ -11,10 +11,8 @@
     </div>
 
     <div class="right-bar">
-        <mat-icon class="right-bar-icon" aria-hidden="false" aria-label="Example home icon"
-            fontIcon="search"></mat-icon>
-        <mat-icon class="tight-bar-icon" aria-hidden="false" aria-label="Example home icon"
-            fontIcon="person"></mat-icon>
+        <mat-icon class="right-bar-icon" fontIcon="search"></mat-icon>
+        <mat-icon class="tight-bar-icon" fontIcon="person"></mat-icon>
     </div>
 </div>
 
@@ -133,9 +131,21 @@
             </mat-step>
             <mat-step label="Play" isEditable="false">
                 <ng-template matStepLabel>Play</ng-template>
-                <p>You are now done.</p>
                 <div class="wizard-content-container">
-                    <div class="wizard-content-container-body"></div>
+                    <div class="wizard-content-container-body">
+                        <h2 class="wizard-content-container-body-header">Play</h2>
+                        <div class="video-control">
+                            <div class="video-control-container">
+                                <mat-icon class="video-control-icon" fontIcon="replay_30"></mat-icon>
+                            </div>
+                            <div class="video-control-container">
+                                <mat-icon class="video-control-icon video-control-icon-play" fontIcon="play_circle_outline"></mat-icon>
+                            </div>
+                            <div class="video-control-container">
+                                <mat-icon class="video-control-icon" fontIcon="forward_30"></mat-icon>
+                            </div>
+                        </div>
+                    </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
                     </div>
