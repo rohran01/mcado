@@ -178,8 +178,20 @@
         transform: scale(5);
         cursor: pointer;
 
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            transform: scale(4.8);
+        }
+
         &-play {
             transform: scale(8);
+
+            &:active {
+                transform: scale(7.8);
+            }
         }
     }
 }
