@@ -278,3 +278,20 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+// dialog styles
+.scottish-warning-dialog {
+  .warning {
+    &-title {
+      font-size: 32px;
+    }
+
+    &-body {
+      font-size: 24px;
+    }
+
+    &-footer {
+      padding: 24px;
+    }
+  }
+}
