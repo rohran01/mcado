@@ -138,8 +138,9 @@
                             <div class="video-control-container">
                                 <mat-icon class="video-control-icon" fontIcon="replay_30"></mat-icon>
                             </div>
-                            <div class="video-control-container">
-                                <mat-icon class="video-control-icon video-control-icon-play" fontIcon="play_circle_outline"></mat-icon>
+                            <div class="video-control-container" (click)="onPlayClick()">
+                                <mat-icon class="video-control-icon video-control-icon-play"
+                                    fontIcon="{{showPlay ? 'play_circle_outline' : 'pause_circle_outline'}}"></mat-icon>
                             </div>
                             <div class="video-control-container">
                                 <mat-icon class="video-control-icon" fontIcon="forward_30"></mat-icon>

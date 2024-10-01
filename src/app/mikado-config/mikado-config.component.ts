@@ -13,23 +13,30 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
+import { MatRippleModule } from '@angular/material/core';
 
 
 @Component({
   selector: 'app-mikado-config',
   standalone: true,
-  imports: [MatIcon, MatStepperModule, MatButton, MatRadioModule, MatCheckboxModule, MatSliderModule],
+  imports: [MatIcon, MatStepperModule, MatButton, MatRadioModule, MatCheckboxModule, MatSliderModule, CommonModule, MatRippleModule],
   templateUrl: './mikado-config.component.html',
   styleUrl: './mikado-config.component.scss'
 })
 export class MikadoConfigComponent implements AfterViewInit {
   readonly dialog = inject(MatDialog);
   anachronismLabel: string = 'None';
+  showPlay: boolean = true;
 
   @ViewChild(MatRadioGroup) accentsGroup: MatRadioGroup | undefined;
   @ViewChild(MatStepper) stepper: MatStepper | undefined;
   ngAfterViewInit() {
     if (this.stepper) this.stepper._getIndicatorType = () => 'number';
+  }
+
+  onPlayClick() {
+    this.showPlay = !this.showPlay;
   }
 
   scottishWarning() {
