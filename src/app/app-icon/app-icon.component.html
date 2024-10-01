@@ -1,8 +1,8 @@
-<div *ngIf="backgroundImageUrl; else rapturePlus" class="icon-background" (click)="onClick()"
+<div *ngIf="backgroundImageUrl; else rapturePlus" class="icon-background" (click)="onClick()" (mouseenter)="boop()"
     [ngStyle]="{ 'background-image': 'url(' + backgroundImageUrl + ')', 'background-color': backgroundColor}"></div>
 
 <ng-template #rapturePlus>
-    <div class="rapture-icon" operational="true" (click)="onClick()">
+    <div class="rapture-icon" operational="true" (click)="onClick()" (mouseenter)="boop()">
         <h1 class="rapture-icon-title">Rapture</h1>
         <h5 class="rapture-icon-subtitle">Plus</h5>
     </div>

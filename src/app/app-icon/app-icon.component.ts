@@ -17,7 +17,17 @@ export class AppIconComponent {
   @Input() backgroundColor: String = ''
 
   onClick() {
-    if (this.operational) this.router.navigate(['rapture']);
+    if (this.operational) {
+      this.boop();
+      this.router.navigate(['rapture']);
+    }
+
   }
 
+  boop() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/boop.mp3";
+    audio.load();
+    audio.play();
+  }
 }
