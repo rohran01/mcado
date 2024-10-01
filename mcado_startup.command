@@ -1,8 +1,5 @@
 #! /bin/sh
 echo ">>>>>STARTING MCADO APP"
-ls
-cd ./
-ls
-git config credential.helper store
+cd mcado
 git pull
 ng serve --watch --open
