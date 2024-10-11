@@ -43,7 +43,7 @@ export class MikadoConfigComponent implements AfterViewInit {
   }
 
   scottishWarning() {
-    if (this.accentsGroup?.value == 2) {
+    if (this.accentsGroup?.value == 3) {
       const dialogRef = this.dialog.open(ScottishWarningDialog, {
         disableClose: true,
         autoFocus: true,
