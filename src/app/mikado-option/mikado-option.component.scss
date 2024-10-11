@@ -6,19 +6,26 @@
     display: flex;
     border-bottom: 1px solid $rapture-blue;
 
+    .image {
+        min-width: 220px;
+    }
+
     .cover-art {
         max-height: 160px;
     }
 
     .details {
         margin-left: 24px;
+    }
 
+    .warning {
+        color: $rapture-red;
     }
 
     .play-button {
         margin-left: auto;
         width: 120px;
-        min-width: 120px;   
+        min-width: 120px;
         display: flex;
         justify-content: center;
 

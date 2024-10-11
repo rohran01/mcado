@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { Show } from '../types/Show';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-mikado-option',
   standalone: true,
-  imports: [MatIcon],
+  imports: [MatIcon, CommonModule],
   templateUrl: './mikado-option.component.html',
   styleUrl: './mikado-option.component.scss'
 })

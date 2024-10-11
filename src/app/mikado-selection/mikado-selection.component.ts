@@ -15,12 +15,6 @@ export class MikadoSelectionComponent {
 
   shows: Show[] = [
     {
-      title: 'The Mikado (original)',
-      description: "Trigger warnings: Racism, exoticism, cultural appropriation. Available in Texas, Florida, Kansas",
-      image: '../assets/mikado-versions/original.jpg',
-      playable: false
-    },
-    {
       title: 'Hot Mikado',
       description: "The Hot Mikado (1985) is a reincarnation of the 1939 all African-American reimagining of Gilbert and Sullivan’s classic.",
       image: '../assets/mikado-versions/hot.png',
@@ -49,6 +43,13 @@ export class MikadoSelectionComponent {
       description: "The world-acclaimed Gilbert & Sullivan Very Light Opera Company breathes new life into an old classic by seamlessly resetting The Mikado in Scotland!",
       image: '../assets/mikado-versions/mcado.png',
       playable: true
+    },
+    {
+      title: 'The Mikado (original)',
+      description: "Arguably Gilbert & Sullivan’s most successful operetta. Taking place in Japan, the show is nevertheless a satire of British institutions, society and politics.",
+      triggerWarning: 'Parental Warnings:  Racism/yellowface, exoticism, cultural appropriation. Available in Texas, Florida, and Kansas only.',
+      image: '../assets/mikado-versions/original.jpg',
+      playable: false
     }
   ];
 
