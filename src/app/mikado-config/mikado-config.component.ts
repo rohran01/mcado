@@ -40,7 +40,7 @@ export class MikadoConfigComponent implements AfterViewInit {
   }
 
   scottishWarning() {
-    if (this.accentsGroup?.value == 3) {
+    if (this.accentsGroup?.value == 2) {
       const dialogRef = this.dialog.open(ScottishWarningDialog, {
         disableClose: true,
         autoFocus: true,
@@ -48,7 +48,6 @@ export class MikadoConfigComponent implements AfterViewInit {
       });
 
     }
-    // TODO: add modal warning here
   }
 
   updateAnachronismLabel(event: Event) {
@@ -56,23 +55,23 @@ export class MikadoConfigComponent implements AfterViewInit {
 
     switch (value) {
       case '0': {
-        this.anachronismLabel = 'None'
+        this.anachronismLabel = 'None (boring)'
         break;
       }
       case '1': {
-        this.anachronismLabel = 'Mild (in the tradition of Gilbert)'
+        this.anachronismLabel = 'Mild (inoffensive, but dull)'
         break;
       }
       case '2': {
-        this.anachronismLabel = 'Minnesota Spicy (still so mild)'
+        this.anachronismLabel = 'Minnesota Spicy (so, still mild)'
         break;
       }
       case '3': {
-        this.anachronismLabel = 'Shameless'
+        this.anachronismLabel = 'Delightfully Irreverent (currently trending)'
         break;
       }
       case '4': {
-        this.anachronismLabel = 'Absurd'
+        this.anachronismLabel = 'Shameless & Absurd (same as “delightfully irreverent” but with whoopee cushions, cell phones, and spit takes)'
         break;
       }
       default: {

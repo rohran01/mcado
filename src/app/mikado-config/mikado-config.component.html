@@ -53,9 +53,9 @@
                             <mat-radio-button value="1" checked>Mono</mat-radio-button>
                             <mat-radio-button value="2">Stereo</mat-radio-button>
                             <mat-radio-button value="3">Dolby 2.0 with <i>Atmos</i></mat-radio-button>
-                            <mat-radio-button value="4"><b>BuikemAudio®</b> ...as if a 30-person orchestra were mere
-                                feet
-                                away</mat-radio-button>
+                            <mat-radio-button value="4"><b>BuikemAudio®</b> …as if a 30-person orchestra and full chorus
+                                were mere feet away
+                            </mat-radio-button>
                         </mat-radio-group>
                     </div>
                     <div class="wizard-content-container-footer">
@@ -69,10 +69,17 @@
                 <div class="wizard-content-container">
                     <div class="wizard-content-container-body">
                         <h2 class="wizard-content-container-body-header">Anachronisms</h2>
+                        <h3 class="wizard-content-container-body-subheader">Lines, lyrics and objects that belong to a
+                            different time period than 19th Century Scotland
+                        </h3>
                         <h1 class="anachronism-label">{{anachronismLabel}}</h1>
-                        <mat-slider class="anachronism-slider" min="0" max="4" step="1" showTickMarks disableRipple>
-                            <input (input)="updateAnachronismLabel($event)" matSliderThumb disableRipple>
-                        </mat-slider>
+                        <div class="anachronism-slider-container">
+                            <h3 class="anachronism-slider-label">Least</h3>
+                            <mat-slider class="anachronism-slider" min="0" max="4" step="1" showTickMarks disableRipple>
+                                <input (input)="updateAnachronismLabel($event)" matSliderThumb disableRipple>
+                            </mat-slider>
+                            <h3 class="anachronism-slider-label">Most</h3>
+                        </div>
                     </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
@@ -102,7 +109,8 @@
                 <ng-template matStepLabel>Confirmation</ng-template>
                 <div class="wizard-content-container">
                     <div class="wizard-content-container-body">
-                        <p class="confirmation-text">Congratulations on choosing <b>G&S VirtualReality®</b>, the most advanced platform to stream
+                        <p class="confirmation-text">Congratulations on choosing <b>G&S VirtualReality®</b>, the most
+                            advanced platform to stream
                             your
                             favorite Gilbert & Sullivan operettas! It functions best with full state of the art
                             audio/visual
@@ -116,12 +124,10 @@
                             <mat-checkbox class="wizard-select-group-checkbox">No Texting</mat-checkbox>
                             <mat-checkbox class="wizard-select-group-checkbox">No Photography</mat-checkbox>
                             <mat-checkbox class="wizard-select-group-checkbox">Phones Off</mat-checkbox>
-                            <mat-checkbox class="wizard-select-group-checkbox">Please chortle freely and applaud to your
-                                heart’s content!</mat-checkbox>
                         </div>
 
-                        <p class="confirmation-text">G&S VirtualReality® technology is highly reliable, but can be sensitive to snoring or humming
-                            along</p>
+                        <p class="confirmation-text">G&S VirtualReality® is built to respond best to applause and
+                            laughter. Please let this inform your viewing experience. </p>
                     </div>
                     <div class="wizard-content-container-footer">
                         <div class="wizard-button" (click)="navBack(stepper)">Back</div>
