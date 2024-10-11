@@ -65,7 +65,7 @@ export class MikadoConfigComponent implements AfterViewInit {
   }
 
   updateAnachronismLabel(event: Event) {
-    var value = (event.target as HTMLInputElement).value;
+    let value = (event.target as HTMLInputElement).value;
 
     switch (value) {
       case '0': {
