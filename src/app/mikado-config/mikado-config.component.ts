@@ -46,8 +46,15 @@ export class MikadoConfigComponent implements AfterViewInit {
         autoFocus: true,
         panelClass: 'rapture-dialog'
       });
-
     }
+  }
+
+  intermission() {
+      const dialogRef = this.dialog.open(IntermissionDialog, {
+        disableClose: true,
+        autoFocus: true,
+        panelClass: 'rapture-dialog'
+      });
   }
 
   updateAnachronismLabel(event: Event) {
@@ -102,6 +109,25 @@ export class MikadoConfigComponent implements AfterViewInit {
 })
 export class ScottishWarningDialog {
   readonly dialogRef = inject(MatDialogRef<ScottishWarningDialog>);
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+
+@Component({
+  selector: 'intermission-dialog',
+  templateUrl: '../intermission-dialog/intermission-dialog.component.html',
+  standalone: true,
+  imports: [
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
+  ],
+})
+export class IntermissionDialog {
+  readonly dialogRef = inject(MatDialogRef<IntermissionDialog>);
 
   onNoClick(): void {
     this.dialogRef.close();
