@@ -1,0 +1,140 @@
+@import '../../assets/colors.scss';
+
+@font-face {
+    font-family: victorianFont;
+    src: url('../../assets/VictorianDecade.otf');
+}
+
+:host {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    color: $rapture-blue;
+    background: $rapture-yellow;
+    background: radial-gradient(circle, rgba(211, 182, 122, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.wrapper {
+    margin: 0 auto;
+    height: calc(100vh - 62px);
+    overflow: scroll;
+}
+
+.top-bar {
+    height: 60px;
+    background-color: white;
+    border-bottom: 2px solid $rapture-blue;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .logo {
+        width: 62px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+        padding-top: 10px;
+
+        &-title {
+            font-family: victorianFont;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        &-subtitle {
+            font-family: victorianFont;
+            color: $rapture-red;
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+
+    .mid-bar {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            margin: 0 40px;
+            font-size: 18px;
+        }
+    }
+
+    .right-bar {
+        width: 62px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-icon {
+            font-size: 36px;
+        }
+    }
+}
+
+.splash {
+    color: $rapture-blue;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+    padding-top: 48px;
+    margin-bottom: 40px;
+
+    &-welcome {
+        margin: 0;
+        font-style: italic;
+        font-size: 24px;
+    }
+
+    &-title {
+        font-family: victorianFont;
+        margin: 10px 0 0 0;
+        font-size: 120px;
+    }
+
+    &-subtitle {
+        font-family: victorianFont;
+        color: $rapture-red;
+        margin: 0;
+        font-size: 96px;
+    }
+}
+
+.reminder {
+    display: flex;
+    flex-direction: column;
+
+    &-content {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &-yes {
+        padding: 12px 24px;
+        margin: 36px auto;
+        background-color: $rapture-blue;
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 24px;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    &-no {
+        color: $rapture-red;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}

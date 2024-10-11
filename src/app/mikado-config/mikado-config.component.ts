@@ -15,6 +15,7 @@ import {
 } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { MatRippleModule } from '@angular/material/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -25,6 +26,8 @@ import { MatRippleModule } from '@angular/material/core';
   styleUrl: './mikado-config.component.scss'
 })
 export class MikadoConfigComponent implements AfterViewInit {
+  constructor(private router: Router) { }
+
   readonly dialog = inject(MatDialog);
   anachronismLabel: string = 'None';
   showPlay: boolean = true;
@@ -50,11 +53,15 @@ export class MikadoConfigComponent implements AfterViewInit {
   }
 
   intermission() {
-      const dialogRef = this.dialog.open(IntermissionDialog, {
-        disableClose: true,
-        autoFocus: true,
-        panelClass: 'rapture-dialog'
-      });
+    const dialogRef = this.dialog.open(IntermissionDialog, {
+      disableClose: true,
+      autoFocus: true,
+      panelClass: 'rapture-dialog'
+    });
+  }
+
+  navSuggestions() {
+    this.router.navigate(['suggestions']);
   }
 
   updateAnachronismLabel(event: Event) {

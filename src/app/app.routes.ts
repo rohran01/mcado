@@ -4,6 +4,7 @@ import { AppleTvComponent } from './apple-tv/apple-tv.component';
 import { RaptureComponent } from './rapture/rapture.component';
 import { MikadoConfigComponent } from './mikado-config/mikado-config.component';
 import { MikadoSelectionComponent } from './mikado-selection/mikado-selection.component';
+import { RaptureSuggestionsComponent } from './rapture-suggestions/rapture-suggestions.component';
 
 export const routes: Routes = [
     { path: '', component: AppleTvComponent },
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'rapture', component: RaptureComponent },
     { path: 'mikado-selection', component: MikadoSelectionComponent },
     { path: 'mikado-config', component: MikadoConfigComponent },
-    { path: 'screen-saver', component: ScreenSaverComponent }
+    { path: 'screen-saver', component: ScreenSaverComponent },
+    { path: 'suggestions', component: RaptureSuggestionsComponent }
 ];
