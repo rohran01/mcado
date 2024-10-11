@@ -44,7 +44,7 @@ export class MikadoConfigComponent implements AfterViewInit {
       const dialogRef = this.dialog.open(ScottishWarningDialog, {
         disableClose: true,
         autoFocus: true,
-        panelClass: 'scottish-warning-dialog'
+        panelClass: 'rapture-dialog'
       });
 
     }
