@@ -42,14 +42,30 @@ export class MikadoConfigComponent implements AfterViewInit {
     this.showPlay = !this.showPlay;
   }
 
-  scottishWarning() {
-    if (this.accentsGroup?.value == 3) {
-      const dialogRef = this.dialog.open(ScottishWarningDialog, {
-        disableClose: true,
-        autoFocus: true,
-        panelClass: 'rapture-dialog'
-      });
+  accentChange() {
+    let selection = this.accentsGroup?.value;
+
+    if (selection == 2) {
+      this.midatlanticConfirmation();
+    } else if (selection == 3) {
+      this.scottishWarning();
     }
+  }
+
+  midatlanticConfirmation() {
+    const dialogRef = this.dialog.open(MidatlanticDialog, {
+      disableClose: true,
+      autoFocus: true,
+      panelClass: 'rapture-dialog'
+    });
+  }
+
+  scottishWarning() {
+    const dialogRef = this.dialog.open(ScottishWarningDialog, {
+      disableClose: true,
+      autoFocus: true,
+      panelClass: 'rapture-dialog'
+    });
   }
 
   intermission() {
@@ -100,6 +116,25 @@ export class MikadoConfigComponent implements AfterViewInit {
 
   navBack(stepper: MatStepper) {
     stepper.previous();
+  }
+}
+
+@Component({
+  selector: 'midatlantic-dialog',
+  templateUrl: '../midatlantic-dialog/midatlantic-dialog.component.html',
+  standalone: true,
+  imports: [
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
+  ],
+})
+export class MidatlanticDialog {
+  readonly dialogRef = inject(MatDialogRef<MidatlanticDialog>);
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 }
 
