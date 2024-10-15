@@ -4,4 +4,5 @@ export type Show = {
     triggerWarning?: string;
     image: string;
     playable: boolean;
+    criticsPick: boolean;
 }

@@ -30,7 +30,7 @@ export class MikadoConfigComponent implements AfterViewInit {
 
   readonly dialog = inject(MatDialog);
   anachronismTitle: string = 'No Anachronisms';
-  anachronismSubTitle: string = 'Safest (and dullest) choice';
+  anachronismSubTitle: string = 'Safest choice. Dull.';
   showPlay: boolean = true;
 
   @ViewChild(MatRadioGroup) accentsGroup: MatRadioGroup | undefined;
@@ -40,6 +40,7 @@ export class MikadoConfigComponent implements AfterViewInit {
   }
 
   onPlayClick() {
+    this.boop();
     this.showPlay = !this.showPlay;
   }
 
@@ -82,27 +83,28 @@ export class MikadoConfigComponent implements AfterViewInit {
   }
 
   updateAnachronismLabel(event: Event) {
+    this.boop();
     let value = (event.target as HTMLInputElement).value;
 
     switch (value) {
       case '0': {
         this.anachronismTitle = 'No Anachronisms'
-        this.anachronismSubTitle = 'Safest (and dullest) choice'
+        this.anachronismSubTitle = 'Safest choice. Dull.'
         break;
       }
       case '1': {
         this.anachronismTitle = 'Mild'
-        this.anachronismSubTitle = 'Inoffensive, but dull'
+        this.anachronismSubTitle = 'Inoffensive. Muted. Meh.'
         break;
       }
       case '2': {
         this.anachronismTitle = 'Minnesota Spicy'
-        this.anachronismSubTitle = 'So, still mild'
+        this.anachronismSubTitle = 'Still meh'
         break;
       }
       case '3': {
         this.anachronismTitle = 'Delightfully Irreverent'
-        this.anachronismSubTitle = 'Carefully curated to maximize "haha" and minimize "no no"'
+        this.anachronismSubTitle = 'Carefully curated to maximize "ha ha" and minimize "no no"'
         break;
       }
       case '4': {
@@ -122,6 +124,13 @@ export class MikadoConfigComponent implements AfterViewInit {
 
   navBack(stepper: MatStepper) {
     stepper.previous();
+  }
+
+  boop() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/boop.mp3";
+    audio.load();
+    audio.play();
   }
 }
 

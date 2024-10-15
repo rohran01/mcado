@@ -123,8 +123,9 @@
                     }
 
                     &-subheader {
-                        margin-top: 0;
+                        margin-top: -32px;
                         font-style: italic;
+                        font-size: 24px;
                     }
                 }
 
@@ -146,11 +147,7 @@
             &-select-group {
                 display: flex;
                 flex-direction: column;
-                font-size: 22px;
-
-                &-option {
-                    // font-size: 22px;
-                }
+                font-size: 36px;
 
                 &-checkbox {
                     margin: 0 0 8px 8px;
@@ -168,9 +165,8 @@
 
     &-subtitle {
         font-size: 42px;
-        opacity: 0.8;
+        font-weight: normal;
         margin: 20px auto 60px auto;
-
     }
 
     &-slider {
@@ -191,7 +187,8 @@
 }
 
 .confirmation-text {
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 0;
 }
 
 .video-control {
@@ -247,5 +244,14 @@
 
     .mat-step-text-label {
         font-size: 24px;
+    }
+
+    .mdc-radio {
+        height: 40px !important;
+        width: 40px !important;
+    }
+
+    .mdc-checkbox {
+        margin-right: 12px !important;
     }
 }

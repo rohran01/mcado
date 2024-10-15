@@ -117,7 +117,7 @@
                             audio-visual equipment is necessary. Minimun requirements: a joyful outlooks, an
                             appreciation of the absurd, and an empty bladder.</p>
 
-                        <h3>Please confirm:</h3>
+                        <h3 class="confirmation-text">Please confirm:</h3>
                         <div class="wizard-select-group">
                             <mat-checkbox class="wizard-select-group-checkbox">No Texting</mat-checkbox>
                             <mat-checkbox class="wizard-select-group-checkbox">No Photography</mat-checkbox>
@@ -139,14 +139,14 @@
                     <div class="wizard-content-container-body">
                         <h2 class="wizard-content-container-body-header">Play</h2>
                         <div class="video-control">
-                            <div class="video-control-container">
+                            <div class="video-control-container" (click)="boop()">
                                 <mat-icon class="video-control-icon" fontIcon="replay_30"></mat-icon>
                             </div>
                             <div class="video-control-container" (click)="onPlayClick()">
                                 <mat-icon class="video-control-icon video-control-icon-play"
                                     fontIcon="{{showPlay ? 'play_circle_outline' : 'pause_circle_outline'}}"></mat-icon>
                             </div>
-                            <div class="video-control-container">
+                            <div class="video-control-container" (click)="boop()">
                                 <mat-icon class="video-control-icon" fontIcon="forward_30"></mat-icon>
                             </div>
                         </div>
