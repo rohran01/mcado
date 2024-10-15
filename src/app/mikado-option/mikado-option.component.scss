@@ -1,10 +1,14 @@
 @import '../../assets/colors.scss';
 
 .container {
-    margin-bottom: 24px;
-    padding-bottom: 24px;
+    padding-top: 36px;
+    padding-bottom: 36px;
     display: flex;
     border-bottom: 1px solid $rapture-blue;
+
+    &:hover {
+        background-color: rgba(white, 0.5);
+    }
 
     .image {
         min-width: 220px;
@@ -16,10 +20,21 @@
 
     .details {
         margin-left: 24px;
+
+        .title {
+            font-size: 48px;
+            margin-top: 0;
+        }
+
+        .description {
+            font-size: 36px;
+            margin-bottom: 0;
+        }
     }
 
     .warning {
         color: $rapture-red;
+        font-size: 36px;
     }
 
     .play-button {

@@ -5,7 +5,14 @@
     margin: 20px;
     border-radius: 12px;
     border: 2px solid $rapture-blue;
-    background-color: rgba(white, 0.6);
+    background-color: rgba(white, 0.5);
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+        background-color: rgba(white, 1);
+        transform: scale(1.1);
+        transition: transform 0.2s ease-in-out;
+    }
 }
 
 .container {

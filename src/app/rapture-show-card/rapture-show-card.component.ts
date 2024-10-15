@@ -16,6 +16,16 @@ export class RaptureShowCardComponent {
   @Input() showDetails!: Show;
 
   onClick() {
-    if (this.showDetails.playable) this.router.navigate(['mikado-selection'])
+    if (this.showDetails.playable) {
+      this.boop();
+      this.router.navigate(['mikado-selection'])
+    }
+  }
+
+  boop() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/boop.mp3";
+    audio.load();
+    audio.play();
   }
 }

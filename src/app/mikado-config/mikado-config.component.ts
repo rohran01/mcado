@@ -29,7 +29,8 @@ export class MikadoConfigComponent implements AfterViewInit {
   constructor(private router: Router) { }
 
   readonly dialog = inject(MatDialog);
-  anachronismLabel: string = 'None';
+  anachronismTitle: string = 'No Anachronisms';
+  anachronismSubTitle: string = 'Safest (and dullest) choice';
   showPlay: boolean = true;
 
   @ViewChild(MatRadioGroup) accentsGroup: MatRadioGroup | undefined;
@@ -85,23 +86,28 @@ export class MikadoConfigComponent implements AfterViewInit {
 
     switch (value) {
       case '0': {
-        this.anachronismLabel = 'None (boring)'
+        this.anachronismTitle = 'No Anachronisms'
+        this.anachronismSubTitle = 'Safest (and dullest) choice'
         break;
       }
       case '1': {
-        this.anachronismLabel = 'Mild (inoffensive, but dull)'
+        this.anachronismTitle = 'Mild'
+        this.anachronismSubTitle = 'Inoffensive, but dull'
         break;
       }
       case '2': {
-        this.anachronismLabel = 'Minnesota Spicy (so, still mild)'
+        this.anachronismTitle = 'Minnesota Spicy'
+        this.anachronismSubTitle = 'So, still mild'
         break;
       }
       case '3': {
-        this.anachronismLabel = 'Delightfully Irreverent (currently trending)'
+        this.anachronismTitle = 'Delightfully Irreverent'
+        this.anachronismSubTitle = 'Carefully curated to maximize "haha" and minimize "no no"'
         break;
       }
       case '4': {
-        this.anachronismLabel = 'Shameless & Absurd (same as “delightfully irreverent” but with whoopee cushions, cell phones, and spit takes)'
+        this.anachronismTitle = 'Shameless & Absurd'
+        this.anachronismSubTitle = 'Same as “delightfully irreverent” but with whoopee cushions, cell phones, and spit-takes'
         break;
       }
       default: {
@@ -147,6 +153,7 @@ export class MidatlanticDialog {
     MatDialogContent,
     MatDialogActions,
     MatDialogClose,
+    MatCheckboxModule
   ],
 })
 export class ScottishWarningDialog {

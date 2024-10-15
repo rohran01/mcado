@@ -32,10 +32,13 @@
                         <h2 class="wizard-content-container-body-header">Languages & Accents</h2>
                         <mat-radio-group (change)="accentChange()" class="wizard-select-group"
                             aria-label="Select an option" #accentsGroup>
-                            <mat-radio-button value="1" checked>Midwestern English</mat-radio-button>
-                            <mat-radio-button value="2">Mid-Atlantic English with a wee Scottish Lilt
+                            <mat-radio-button class="wizard-select-group-option" value="1" checked>Midwestern
+                                English</mat-radio-button>
+                            <mat-radio-button class="wizard-select-group-option" value="2">Mid-Atlantic English with a
+                                wee Scottish Lilt
                                 (Recommended)</mat-radio-button>
-                            <mat-radio-button value="3">Scottish Brogue</mat-radio-button>
+                            <mat-radio-button class="wizard-select-group-option" value="3">Scottish Shetland
+                                Brogue</mat-radio-button>
                         </mat-radio-group>
                     </div>
                     <div class="wizard-content-container-footer">
@@ -72,7 +75,8 @@
                         <h3 class="wizard-content-container-body-subheader">Lines, lyrics and objects that belong to a
                             different time period than 19th Century Scotland
                         </h3>
-                        <h1 class="anachronism-label">{{anachronismLabel}}</h1>
+                        <h1 class="anachronism-title">{{anachronismTitle}}</h1>
+                        <h3 class="anachronism-subtitle">{{anachronismSubTitle}}</h3>
                         <div class="anachronism-slider-container">
                             <h3 class="anachronism-slider-label">Least</h3>
                             <mat-slider class="anachronism-slider" min="0" max="4" step="1" showTickMarks disableRipple>
@@ -109,14 +113,9 @@
                 <ng-template matStepLabel>Confirmation</ng-template>
                 <div class="wizard-content-container">
                     <div class="wizard-content-container-body">
-                        <p class="confirmation-text">Congratulations on choosing <b>G&S VirtualReality®</b>, the most
-                            advanced platform to stream
-                            your
-                            favorite Gilbert & Sullivan operettas! It functions best with full state of the art
-                            audio/visual
-                            equipment. But all that is truly required is a joyful outlook, an appreciation of the
-                            absurd,
-                            and an empty bladder. We hope you have brought all of these with you.</p>
+                        <p class="confirmation-text">Congratulations on choosing <b>G&S VirtualReality®</b>! No special
+                            audio-visual equipment is necessary. Minimun requirements: a joyful outlooks, an
+                            appreciation of the absurd, and an empty bladder.</p>
 
                         <h3>Please confirm:</h3>
                         <div class="wizard-select-group">

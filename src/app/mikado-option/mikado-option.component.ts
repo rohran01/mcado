@@ -18,7 +18,15 @@ export class MikadoOptionComponent {
 
   onClick() {
     if (this.showDetails.playable) {
+      this.boop();
       this.router.navigate(['mikado-config'])
     }
+  }
+
+  boop() {
+    let audio = new Audio();
+    audio.src = "../assets/sounds/boop.mp3";
+    audio.load();
+    audio.play();
   }
 }

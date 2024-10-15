@@ -84,23 +84,27 @@
     padding-top: 48px;
     margin-bottom: 40px;
 
-    &-welcome {
-        margin: 0;
-        font-style: italic;
-        font-size: 24px;
-    }
-
     &-title {
-        font-family: victorianFont;
         margin: 10px 0 0 0;
         font-size: 120px;
     }
 
     &-subtitle {
-        font-family: victorianFont;
         color: $rapture-red;
         margin: 0;
         font-size: 96px;
+    }
+
+    &-tagline {
+        margin: 0;
+        font-style: italic;
+        font-size: 48px;
+    }
+
+    &-title,
+    &-subtitle,
+    &-tagline {
+        font-family: victorianFont;
     }
 }
 
