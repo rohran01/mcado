@@ -52,7 +52,8 @@ export class MikadoSelectionComponent {
     {
       title: 'The Mikado (original)',
       description: "Arguably Gilbert & Sullivan’s most successful operetta.",
-      triggerWarning: 'Parental Warnings:  Racism/yellowface, exoticism, cultural appropriation. Available in Texas, Florida, and Kansas only.',
+      triggerWarning: 'Parental Warnings:  Racism/yellowface, exoticism, cultural appropriation. ',
+      triggerSubwarning: 'Available in Texas, Florida, and Kansas only.',
       image: '../assets/mikado-versions/original.jpg',
       playable: false,
       criticsPick: false

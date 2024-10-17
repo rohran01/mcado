@@ -1,11 +1,14 @@
-<div class="container">
+<div class="container" v (mouseenter)="boop()">
     <div class="image">
         <img class="cover-art" [src]="showDetails.image" />
     </div>
     <div class="details">
         <h1 class="title">{{showDetails.title}}</h1>
         <h3 class="description">{{showDetails.description}}</h3>
-        <h3 *ngIf="showDetails.triggerWarning" class="warning">{{showDetails.triggerWarning}}</h3>
+        <div *ngIf="showDetails.triggerWarning" class="warning">
+            <h3>{{showDetails.triggerWarning}}</h3>
+            <h3>{{showDetails.triggerSubwarning}}</h3>
+        </div>
         <h3 *ngIf="showDetails.criticsPick" class="critics-pick"><mat-icon>star</mat-icon> NYTimes
             Critic’s Pick
             <mat-icon>star</mat-icon>
