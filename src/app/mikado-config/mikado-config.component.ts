@@ -99,7 +99,7 @@ export class MikadoConfigComponent implements AfterViewInit {
       }
       case '2': {
         this.anachronismTitle = 'Minnesota Spicy'
-        this.anachronismSubTitle = 'Still meh'
+        this.anachronismSubTitle = 'Not spicy.'
         break;
       }
       case '3': {
