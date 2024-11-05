@@ -104,7 +104,7 @@ export class MikadoConfigComponent implements AfterViewInit {
       }
       case '3': {
         this.anachronismTitle = 'Delightfully Irreverent'
-        this.anachronismSubTitle = 'Carefully curated to maximize "ha ha" and minimize "no no"'
+        this.anachronismSubTitle = 'Artful confections with no unpleasant aftertaste'
         break;
       }
       case '4': {

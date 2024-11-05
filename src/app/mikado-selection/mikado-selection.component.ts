@@ -36,7 +36,7 @@ export class MikadoSelectionComponent {
       criticsPick: false
     },
     {
-      title: 'Eric Idol Mikado',
+      title: 'Eric Idle Mikado',
       description: "Eric Idle of Monty Python fame, leads a 1987 ensemble of “The Mikado” set in an English country hotel during the 1920s.",
       image: '../assets/mikado-versions/idle.png',
       playable: false,
